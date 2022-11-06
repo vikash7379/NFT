@@ -8,7 +8,7 @@ import img5 from '../assets/Nfts/bighead-5.svg'
 import img6 from '../assets/Nfts/bighead-6.svg'
 import img7 from '../assets/Nfts/bighead-7.svg'
 import img8 from '../assets/Nfts/bighead-8.svg'
-import ConfettiComponent from '../sub-component/Confetti';
+import ConfettiComponent from '../styles/Confetti';
 
 
 const Section = styled.section`

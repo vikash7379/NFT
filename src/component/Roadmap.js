@@ -2,7 +2,7 @@ import React , {useLayoutEffect, useRef} from 'react'
 import gsap from 'gsap';
 // import ScrollTrigger from 'gsap/ScrollTrigger';
 import styled from 'styled-components'
-import DrawSVG from '../sub-component/DrawSVG'
+import DrawSVG from '../styles/DrawSVG'
 
 
 const Section = styled.section`
