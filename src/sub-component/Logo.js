@@ -7,6 +7,10 @@ const LogoText = styled.h1`
     font-size: ${props => props.theme.fontxxxl};
     color : ${props => props.theme.text};
 
+    @media (max-width : 48em) {
+      font-size: 2.5rem;
+    }
+
     &:hover{
         transform: scale(1.1);
         transition: all 0.2s ease;

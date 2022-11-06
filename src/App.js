@@ -9,6 +9,7 @@ import Showcase  from './component/Showcase';
 import Team from './component/Team';
 import Faq from './component/Faq';
 import Footer from './component/Footer'
+import ScrollToTop from "./styles/ScrollToTop";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
          <Team/>
          <Faq/>
          <Footer/>
+         <ScrollToTop/>
       </ThemeProvider>
     </>
   );

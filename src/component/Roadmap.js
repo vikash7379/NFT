@@ -2,7 +2,7 @@ import React , {useLayoutEffect, useRef} from 'react'
 import gsap from 'gsap';
 // import ScrollTrigger from 'gsap/ScrollTrigger';
 import styled from 'styled-components'
-import DrawSVG from '../styles/DrawSVG'
+import DrawSVG from '../sub-component/DrawSVG'
 
 
 const Section = styled.section`
@@ -19,6 +19,12 @@ const Title = styled.h1`
   margin: 1rem auto;
   border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
+
+  @media (max-width : 40em){
+  font-size: ${(props)=>props.theme.fontxl};
+
+ }
+
 `
 const Container = styled.div`
   width: 70%;
@@ -29,6 +35,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media (max-width : 64em) {
+    width: 80%;
+  }
+  @media (max-width : 48em) {
+    width : 90%;
+  }
 `
 const SvgConatiner = styled.div`
   display: flex;
@@ -44,12 +57,26 @@ const Items = styled.ul`
   justify-content: center;
   align-items:center;
 
+  @media (max-width : 48em) {
+    width: 90%;
+  }
+
   &>*:nth-of-type(2n+1){
     justify-content: start;
+
+
 
     div{
       border-radius: 50px 0 50px 0;
       text-align: right;
+      @media (max-width : 48em) {
+        border-radius: 0 50px 0 50px;
+        text-align: left;
+        p{
+          border-radius: 0 40px 0 40px;
+
+        }
+      }
     }
     p{
       border-radius: 40px 0 40px 0;
@@ -58,9 +85,15 @@ const Items = styled.ul`
   &>*:nth-of-type(2n){
     justify-content: end;
 
+    @media (max-width : 48em) {
+      justify-content: center;
+    }
+
     div{
       border-radius: 0 50px 0 50px;
       text-align: left;
+
+
     }
     p{
       border-radius: 0 40px 0 40px;
@@ -72,12 +105,20 @@ const Item = styled.li`
  width: 100%;
  height: 100%;
  display: flex;
+
+ @media (max-width : 48em){
+  justify-content: flex-end !important;
+ }
 `
 const ItemContainer = styled.div`
   width: 40%;
   height: fit-content;
   padding: 1rem;
   border: 3px solid ${props=>props.theme.text};
+
+  @media (max-width : 48em){
+  width: 70%;
+ }
 `
 const Box = styled.p`
   height:fit-content;
@@ -92,6 +133,12 @@ const SubTitle = styled.span`
   font-size: ${props=>props.theme.text};
   text-transform: capitalize;
   color: ${props=>props.theme.text};
+
+  @media (max-width : 40em) {
+    font-size: ${(props)=>props.theme.fontlg};
+    font-weight: 600;
+  }
+
 `;
 const Text = styled.span`
   display: block;
@@ -100,9 +147,12 @@ const Text = styled.span`
   color: ${props=>props.theme.text};
   font-weight: 400;
   margin: 0.5rem 0;
+
+  @media (max-width : 40em) {
+    font-size: ${(props)=>props.theme.fontxs};
+    font-weight: 600;
+  }
 `;
-
-
 
 
 const RoadmapItem = ({title,subtext,addToRefs}) =>{
@@ -163,7 +213,7 @@ const Roadmap = () => {
   },[])
 
   return (
-    <Section>
+    <Section id="roadmap">
       <Title>Roadmap</Title>
       <Container>
         <SvgConatiner>

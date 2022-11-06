@@ -4,8 +4,9 @@ import styled from 'styled-components'
 
 const Btn = styled.button`
     display: inline-block;
-    background-color: ${props => props.theme.text};
-    color: ${props => props.theme.body};
+    /* background-color: ${props => props.theme.text}; */
+    background-color: ${props=>props.background};
+    color: ${props => props.color};
     outline: none;
     border: none;
     font-size: ${props => props.theme.fontsm};
@@ -39,9 +40,9 @@ const Btn = styled.button`
 `
 
 
-const Button = ({text,link}) => {
+const Button = ({text,link,bgcolor,color}) => {
   return (
-    <Btn><a href={link} area-label={text} target="_blank">{text}</a></Btn>
+    <Btn background={bgcolor} color={color}><a href={link} area-label={text} target="_blank">{text}</a></Btn>
   )
 }
 
