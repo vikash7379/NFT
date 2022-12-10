@@ -42,7 +42,7 @@ const Menu = styled.ul`
     right: 0;
     bottom: 0;
     width: 100vw;
-    /* height: 15rem; */
+    height: 100vh;
     height: ${props=>`calc(100vh-${props.theme.navHeight})`};
     z-index:50;
     background-color:${props=>`rgba(${props.theme.bodyRgba},0.85)`};
@@ -136,6 +136,7 @@ const Navbar = () => {
   }
 
 
+
   return (
     <>
       <Section id='navbar'>
@@ -153,7 +154,7 @@ const Navbar = () => {
             <MenuItem onClick={()=> scrollTo('faq')}>FAQ</MenuItem>
             <MenuItem>
               <div className='mobile'>
-                <Button text="click here" link="www.google.com" bgcolor="#202020" color="white"/>
+                <Button text="click here" link="www.google.com" bgcolor="#202020" color="white" />
               </div>
             </MenuItem>
           </Menu>

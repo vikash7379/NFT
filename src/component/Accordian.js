@@ -45,6 +45,7 @@ const Indicator = styled.span`
 `
 
 const Accordian = ({title,children}) => {
+    
 
     const [collapse,setCollapse] = useState(false);
 

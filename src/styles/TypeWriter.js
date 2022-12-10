@@ -74,7 +74,7 @@ const TypeWriter = () => {
             autoStart:true,
             loop:true,
         }}
-  onInit={(typewriter) => {
+    onInit={(typewriter) => {
     typewriter.typeString('<span class="text-1">NFTs.</span>')
     .pauseFor(2000)
     .deleteAll()

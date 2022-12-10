@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import Navbar from "./component/Navbar";
 import GlobleStyle from "./styles/GlobleStyle";
-import {light} from './styles/Theme'
+import {light,dark} from './styles/Theme'
 import Home from './component/Home';
 import About from './component/About';
 import Roadmap from  './component/Roadmap';
@@ -12,6 +12,7 @@ import Footer from './component/Footer'
 import ScrollToTop from "./styles/ScrollToTop";
 
 function App() {
+  
   return (
     <>
       <GlobleStyle/>

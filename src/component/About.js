@@ -17,7 +17,7 @@ const Section = styled.section`
 const Container = styled.div`
   width: 75%;
   min-height: 80vh;
-  margin: 0 auto;
+  margin: 1rem auto;
   /* background-color: lightblue; */
 
   display: flex;

@@ -22,6 +22,7 @@ import img10 from '../assets/Nfts/bighead-10.svg'
 
 const Container = styled.div`
     width: 20vw;
+    min-height: 20rem;
     height: 55vh;
 
     @media (max-width : 70em) {
